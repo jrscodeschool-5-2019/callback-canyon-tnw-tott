@@ -256,25 +256,44 @@
             });
         });
     }
+    //# sourceMappingURL=tape-modern.esm.js.map
 
     /**
      * equals function
      *
      * takes two values and returns true if the values are the same
      *
-     * @param a any
-     * @param b any
+     * @param {any} a
+     * @param {any} b
      *
      * @returns boolean
      */
     const equals = function(a, b) {
-      return a === b
+      return a === b;
     };
 
-    test('equals function', async t => {
-      t.ok(equals(true, true));
-      t.notOk(equals(true, false));
+    test("equals function", assert => {
+      assert.equal(equals(1, 1), true, "1 === 1 is true");
+    });
 
+    test("equals test 2", assert => {
+      const result = equals("hello", "hello");
+      assert.equal(result, true, "strings equal strings");
+    });
+
+    /**
+     * @param {Number} a
+     * @param {Number} b
+     *
+     * @returns {Number}
+     */
+    function add(a, b) {
+      return a + b;
+    }
+
+    test("1 + 1 should equal 2", function(assert) {
+      const result = add(1, 1);
+      assert.equal(result, 2, "1 + 1 should be 2");
     });
 
     function createCommonjsModule(fn, module) {
@@ -345,12 +364,5 @@
     var tapBrowserColor_1 = tapBrowserColor.colors;
 
     tapBrowserColor();
-      /*
-    const run = async function() {
-      return await import('./test')
-    }
-
-    run()
-    */
 
 }());

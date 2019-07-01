@@ -1,11 +1,5 @@
-import './equals_test'
-import tapBrowserColor from 'tap-browser-color'
-tapBrowserColor()
-  /*
-const run = async function() {
-  return await import('./test')
-}
+import "./equals_test";
+import "./add_test";
 
-run()
-*/
-
+import tapBrowserColor from "tap-browser-color";
+tapBrowserColor();
